@@ -1,6 +1,6 @@
 import React from "react";
 import {withRouter} from "react-router-dom";
-
+import "./Nav.css";
 
 export class Nav extends React.Component{
   constructor(props) {
@@ -29,24 +29,24 @@ export class Nav extends React.Component{
           </div>
           <div className="collapse navbar-collapse" id="myNavbar">
             <ul className="nav navbar-nav">
-              <li className="active"><a href="#" onClick={() => this.handleNavigateToURL("/")}>Home</a></li>
+              <li><a href="#" onClick={() => this.handleNavigateToURL("/")}>Home</a></li>
               <li className="dropdown">
                 <a className="dropdown-toggle" id="dropdownSearchButton" data-toggle="dropdown" href="#">SEARCH <span className="caret"></span></a>
                 <ul className="dropdown-menu" aria-labelledby="dropdownSearchButton">
-                  <li onClick={() => this.handleNavigateToURL("/search/have")}><a href="/search/have">I HAVE A ROOM</a></li>
-                  <li onClick={() => this.handleNavigateToURL("/search/need")}><a href="/search/need">I NEED A ROOM</a></li>
+                  <li onClick={() => this.handleNavigateToURL("/search/have")}><a role="button">I HAVE A ROOM</a></li>
+                  <li onClick={() => this.handleNavigateToURL("/search/need")}><a role="button">I NEED A ROOM</a></li>
                  </ul>
               </li>
               <li className="dropdown">
                 <a className="dropdown-toggle" data-toggle="dropdown" href="./">CREATE ACCOUNT <span className="caret"></span></a>
                 <ul className="dropdown-menu">
-                  <li><a onClick={() => this.handleNavigateToURL("/createaccount/need")} href="/createaccount/need">I NEED A ROOM</a></li>
-                  <li><a onClick={() => this.handleNavigateToURL("/createaccount/have")} href="/createaccount/have">I HAVE A ROOM</a></li>
+                  <li><a role="button" onClick={() => this.handleNavigateToURL("/createaccount/need")}>I NEED A ROOM</a></li>
+                  <li><a role="button" onClick={() => this.handleNavigateToURL("/createaccount/have")}>I HAVE A ROOM</a></li>
                  </ul>
               </li>
 
-              <li><a href="./">ABOUT US</a></li>
-              <li><a href="./">CONTACT US</a></li>
+              <li onClick={() => this.handleNavigateToURL("/about")}><a role="button">ABOUT US</a></li>
+              <li onClick={() => this.handleNavigateToURL("/contact")}><a role="button">CONTACT US</a></li>
             </ul>
             <ul className="nav navbar-nav navbar-right">
               <li><a href="./"><span className="glyphicon glyphicon-user"></span> Sign Up</a></li>

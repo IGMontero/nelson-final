@@ -39,8 +39,8 @@ export default class Search extends React.Component {
     const subtitle =  type && type === "have" ? "I HAVE A ROOM" : "I NEED A ROOM";
 
     return(
-      <div>
-        <h1 className="mb-5" style={{textAlign: "center"}}>CREATE ACCOUNT</h1>
+      <div className="container">
+        <h1 className="mb-5">CREATE ACCOUNT</h1>
           <h2 style={{textAlign: "center"}}>
             {subtitle}
           </h2>

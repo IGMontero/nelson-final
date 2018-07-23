@@ -1,0 +1,17 @@
+.contact {
+  height: 78.9vh;
+  padding: 10rem 20rem;
+}
+
+.contact-title {
+  margin-bottom: 40px;
+}
+
+.contact-social > span {
+  margin-right: 15px;
+}
+
+.contact-social > i:not(:last-child){
+  margin-right: 15px;
+  cursor: pointer;
+}

@@ -1,5 +1,6 @@
 import React from "react";
 import Carousel from 'nuka-carousel';
+import "./Carousel.css";
 
 export default class extends React.Component {
   render() {
@@ -12,7 +13,7 @@ export default class extends React.Component {
 
 
     return (
-      <Carousel>
+      <Carousel className="carousel" minHeight="100%">
         <img src="https://images.unsplash.com/photo-1478812954026-9c750f0e89fc?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=96cc9609b49dbccd31188aef0c82cfb6&auto=format&fit=crop&w=1350&q=80"alt="Roommates near me" />
         <img src="https://images.unsplash.com/photo-1515552788982-9580e95b4987?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0bb567c84d519f938ac11f3e2c7d784b&auto=format&fit=crop&w=1350&q=80"alt="Roommates near me" />
         <img src="https://images.unsplash.com/photo-1490578474895-699cd4e2cf59?ixlib=rb-0.3.5&s=cc08a3e8fb5dc21d301639655c18895d&auto=format&fit=crop&w=1351&q=80"alt="Roommates in your city" />

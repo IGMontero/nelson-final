@@ -1,8 +1,10 @@
 import React from "react";
 import { Col, Row, Container } from "../../components/Grid";
 import Jumbotron from "../../components/Jumbotron";
+import "./NoMatch.css";
 
 const NoMatch = () =>
+<div  className="no-match-container">
   <Container fluid>
     <Row>
       <Col size="md-12">
@@ -16,6 +18,7 @@ const NoMatch = () =>
         </Jumbotron>
       </Col>
     </Row>
-  </Container>;
+  </Container>
+</div>;
 
 export default NoMatch;

@@ -1,0 +1,34 @@
+.user-card {
+  border: 1px solid lightgray;
+}
+
+.user-card-image {
+  max-width: 280px;
+  height: 250px;
+}
+
+.heading-results {
+  margin-bottom: 40px;
+  font-size: 40px;
+}
+
+.search-heading {
+  font-size: 35px;
+  margin-bottom: 40px;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+.results-container {
+  margin-bottom: 50px;
+}
+
+.card-text {
+  font-size: 18px;
+}
+
+.user-info-name {
+  font-weight: bold;
+}

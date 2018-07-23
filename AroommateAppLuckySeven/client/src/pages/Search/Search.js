@@ -1,6 +1,7 @@
 import * as React from "react";
 import API from "../../utils/API";
 import RoomForm from "../../components/RoomForm";
+import "./Search.css";
 
 export default class Search extends React.Component {
   constructor(props) {
@@ -41,10 +42,10 @@ export default class Search extends React.Component {
       let formattedAccountType = accountType === "has" ? accountType : accountType + "s";
       formattedAccountType = this.capitalizeString(formattedAccountType);
       return (
-        <div key={user._id} className="card" style={{marginBottom: "50px"}}>
-          <img className="card-img-top" style={{height: "250px"}} src={user.profileImage}/>
+        <div key={user._id} className="card user-card col-md-4">
+          <img className="user-card-image card-img-top" src={user.profileImage}/>
           <div className="card-body">
-            <h5 className="card-title">{user.name}</h5>
+            <h5 className="card-title h3">{user.name}</h5>
             <p className="card-text">Gender: {user.gender}</p>
             <p className="card-text">Age: {user.age}</p>
             <p className="card-text">Preferences: {user.preferences.join(", ")}.</p>
@@ -64,18 +65,24 @@ export default class Search extends React.Component {
       <div className="container">
       <h1>SEARCH</h1>
         <div className="row">
-          <div className="col-md-6">
-            <h2 style={{textAlign: "center"}}>
+          <div className="col-md-12">
+            <h2 className="search-heading" style={{textAlign: "center"}}>
               {subtitle}
             </h2>
             <RoomForm onSubmit={this.handleSubmit}/>
           </div>
-          <div className="col-md-6 text-center">
-            <h2 style={{textAlign: "center"}}>
-              Search results:
-            </h2>
+          <div className="col-md-12 text-center results-container">
             {usersData &&
-              this.renderUsers()}
+              <h2 className="heading-results">
+                RESULTS:
+              </h2>
+            }
+            <div className="container">
+              <div className="row">
+                {usersData &&
+                  this.renderUsers()}
+              </div>
+            </div>
           </div>
         </div>
       </div>

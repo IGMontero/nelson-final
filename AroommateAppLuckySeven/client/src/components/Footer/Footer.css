@@ -1,0 +1,36 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  background-color: #00838f;
+}
+
+.social-buttons-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: white;
+  height: 70%;
+  font-size: 25px;
+}
+
+.social-buttons-container > i {
+  cursor: pointer;
+}
+
+.social-buttons-container > i:not(:last-child) {
+  margin-right: 25px;
+}
+
+.author-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  height: 30%;
+  width: 100%;
+  background-color: #006972;
+  color: white;
+}
